@@ -58,4 +58,29 @@ console.log(Object.entries(obj2))
   [ 'email', 'mail@gmail.com' ]
 ] */
 
-console.log(obj2.hasOwnProperty('name'))         // true
+// console.log(obj2.hasOwnProperty('name'))         // true
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor    // baar baar ise likhna na pde suke liye hmlog niche wale tareeke ko use krte h
+
+const {courseInstructor: instructor} = course   // ab apne se hm name change bhi rk skte h like  courseInstructor -> instructor
+
+// console.log(courseInstructor);
+console.log(instructor);   
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
