@@ -39,7 +39,7 @@ function loginUserMessage(username = "sam"){                  // yahan default v
 // console.log(loginUserMessage("hitesh"))
 
 
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){      // ye hm tb use krte h jb pta n ho ki user kitna value pass krega, yaha ...num1 jitna bhi bacha value rhega use le lega, aur val1,val2 shuru k do lenge value
     return num1
 }
 
@@ -65,6 +65,7 @@ const myNewArray = [200, 400, 100, 600]
 function returnSecondValue(getArray){
     return getArray[1]
 }
+   
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
