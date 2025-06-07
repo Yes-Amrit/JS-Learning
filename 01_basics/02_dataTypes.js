@@ -7,6 +7,7 @@ let age = 20
 let isLoggedIn = false
 
 
+
 // Primitive data types
 //number
 //string

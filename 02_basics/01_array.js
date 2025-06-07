@@ -15,7 +15,8 @@ arr1.push('D')
 arr1.unshift(33)    //start me add ho jayega
 arr1.shift()    //shift ho jaygea right me
 
-arr1.pop()  //D will be removed
+arr1.pop()  //D will be removed 
+
 console.log(arr1)    
 console.log(arr1.includes(12))  //return true or false    
 console.log(arr1.indexOf(2))  //return index of 2  
