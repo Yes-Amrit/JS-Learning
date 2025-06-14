@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM </title>
+</head>
+<body style=" background-color: #212121; color: beige;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const v1 = document.querySelector('.parent')
+    // console.log(v1);
+    // console.log(v1.children);
+    // console.log(v1.children[2]);
+    // for(let i=0; i<v1.children.length;i++){
+    //     console.log(v1.children[i].innerHTML);
+    // }
+    // v1.children[2].style.color = "orange"
+    // console.log(v1.firstElementChild)
+    // console.log(v1.lastElementChild)
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
+
+    console.log("Nodes: ",v1.childNodes)
+</script>
+</html>
