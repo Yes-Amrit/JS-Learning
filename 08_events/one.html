@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Events</title>
+</head>
+<body style="background-color: #414141; padding: 5px; border-radius: 2px; border: 10px;">
+    <div><ul id="images">
+        
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpgPqBzOGzwZAMrhhgzW46XJWujRNoJbZiA&s" id="first" alt="" ></li>       <!--- ye wala onclick approach hm avoid krenge, iske jgh hm document ke thorugh getElementId use krenge --->    <!--- onclick="alert('first')" --->
+        <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyNMj7fOV3if7Q5Xx_QIWyl1iX_iJVGQzdhQ&s" id="second" alt=""></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlcfWKeQptluupaTLANXe9sgZqBRwL_TFKA&s" id="third" alt=""></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB4KP02IvuWWnfJi-4KNBSJ0vSpXAVb76DWQ&s" alt=""></li>
+        <li> <a style="color: aliceblue;" id="google" href="https://www.google.com/">VISIT GOOGLE ONCE</a> </li>
+    </ul></div>
+</body>
+<script>
+    // document.getElementById('third').onclick = function(){
+    //     alert("third image")
+    // }
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     // alert("Clicked by Third method");
+    //     console.log("Clicked on any images")
+
+    // }, false)                                   //false default hota h   
+    
+    
+    // document.getElementById('second').addEventListener('click', function(e){
+    //     // alert("Clicked by Third method");
+    //     console.log("Clicked on  particular image")
+    //     e.stopPropagation()                            //isse kya hoga ki ye execute hone k baad ab ye upar nhi jayega
+    // }, false)                    
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log("Setting changed in google")
+    //     e.preventDefault()
+    //     e.stopPropagation();
+    // })
+    
+
+     // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //Event Capturing jb Default behaviour event listener ka true rhe -> tb isme bahar se andar ke side jayega execute hote hue aur just opposite false me hota h pahle andar and then bahar and use hm Event bubbling bolte h
+
+    //NOW if i want to remove any image on just click ------------->>>>>>>>>>>>>
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        
+    })
+
+    
+</script>
+</html>
