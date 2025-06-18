@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Amrit Raj</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const myName = function(){                 //setTimeout bss itne time k baad ik baar print krke rukk jata , aur setInterval utne derr ke baad print krte rhega continuosly
+        console.log("Amrit")
+    }
+    
+    const overWrite = function(){
+        document.querySelector('h1').innerHTML = "Learn JS as SOON as Possible"
+    }
+    
+    const changeMe = setTimeout(overWrite, 3000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+
+</script>
+</html>
